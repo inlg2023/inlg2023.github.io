@@ -1,7 +1,7 @@
 committee:
   - role: Program Chair
     name: Maria Keet
-    im: /static/images/maria.png
+    im: /static/images/maria.jpg
     aff: University of Cape Town
   - role: Program Chair
     name: Hung-Yi Lee
@@ -13,7 +13,7 @@ committee:
   - role: Generation Challenge Chair
     name: Simon Mille
     aff: ADAPT Research Centre, Dublin City University
-    im: /static/images/simon.png
+    im: /static/images/simon.jpg
   - role: SIGGEN Exec
     name: Raquel Hervás
     aff: University Complutense of Madrid
