@@ -152,6 +152,12 @@ def workshops():
     data["workshops"] = open("sitedata/workshops.md").read()
     return render_template("workshops_preliminary.html", **data)
 
+@app.route("/accepted_papers.html")
+def accepted_papers():
+    data = _data()
+    data["accepted_papers"] = open("sitedata/accepted_papers.md").read()
+    return render_template("accepted_papers.html", **data)
+
 @app.route("/local.html")
 def local():
     data = _data()
