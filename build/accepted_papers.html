@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +49,13 @@
     <script src="static/js/data/api.js"></script>
 
     
+    <script>
+      var auth0_domain = "dev-ma80app1.us.auth0.com";
+      var auth0_client_id = "ptF3gg7K6X0VN0FxOeCAVbKURrAis82d";
+    </script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
+    <script src="static/js/modules/auth0protect.js"></script>
+    
 
     <!-- External CSS -->
     <link rel="stylesheet"
@@ -70,12 +79,13 @@
     <link rel="stylesheet" href="static/css/lazy_load.css"/>
     <link rel="stylesheet" href="static/css/typeahead.css"/>
 
-    <title>INLG 2022: Workshops</title>
+    <title>INLG 2023</title>
     
 </head>
 
 <body>
 <!-- NAV -->
+
 <nav
         class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto"
         id="main-nav"
@@ -83,13 +93,13 @@
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img
-                    class="logo" src="https://inlg2021.github.io/img/logo.png"
+                    class="logo" src="static/images/inlg_logo.png"
                     height="auto"
             width="90px"
             />
         </a>
         
-        <a class="navbar-brand" href="index.html">15th International Natural Language Generation Conference</a>
+        <a class="navbar-brand" href="index.html">16th International Natural Language Generation Conference</a>
         
         <button
                 class="navbar-toggler"
@@ -116,7 +126,15 @@
                 </li>
 
                 <li class="nav-item ">
+                    <a class="nav-link" href="workshops.html">Workshops</a>
+                </li>
+
+                <li class="nav-item ">
                     <a class="nav-link" href="organizers.html">Organizers</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://sigdialinlg2023.github.io/">Participating</a>
                 </li>
 
             <li class="nav-item dropdown">
@@ -125,38 +143,67 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="speakers.html">Keynotes</a>
-                    <a class="dropdown-item" href="panels.html">Panel</a>
+<!--                    <a class="dropdown-item" href="panels.html">Panel</a>-->
                     <a class="dropdown-item" href="accepted_papers.html">Accepted Papers</a>
-                    <a class="dropdown-item" href="papers.html">Papers</a>
-                    <a class="dropdown-item" href="workshops.html">Workshops</a>
-                    <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-                    <a class="dropdown-item" href="hackathons.html">Hackathon</a>
-                    <a class="dropdown-item" href="genchal.html">GenChal</a>
+<!--                    <a class="dropdown-item" href="papers.html">Papers</a>-->
+<!--                    <a class="dropdown-item" href="workshops.html">Workshops</a>-->
+<!--                    <a class="dropdown-item" href="tutorials.html">Tutorials</a>-->
+<!--                    <a class="dropdown-item" href="hackathons.html">Hackathon</a>-->
+<!--                    <a class="dropdown-item" href="genchal.html">GenChal</a>-->
                   </div>
-               </li>
+            </li>
 
-               <li class="nav-item ">
-                  <a class="nav-link" href="calendar.html">Schedule</a>
-              </li>
+<!--               <li class="nav-item ">-->
+<!--                  <a class="nav-link" href="calendar.html">Schedule</a>-->
+<!--              </li>-->
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="sponsors.html">Sponsors</a>
-                </li>
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="sponsors.html">Sponsors</a>-->
+<!--                </li>-->
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="registration.html">Registration</a>
-                </li>
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="registration.html">Registration</a>-->
+<!--                </li>-->
 
                 <li class="nav-item ">
                     <a class="nav-link" href="help.html">Help</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://2023.sigdial.org/">SIGDIAL 2023</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
+
+
 <!-- User Overrides -->
- 
+
+<style>
+  .back {
+    background: url("static/images/prague_cropped.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        16th International Natural Language Generation Conference
+      </h2>
+      <h2 class="p-5">
+        11-15 September 2023
+      </h2>
+    </div>
+  </div>
+</div>
+
 
 <div class="container">
     <!-- Tabs -->
@@ -166,172 +213,144 @@
     <!-- Content -->
     <div class="content">
         
-<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-  <div id="day">
-    <!-- Workshops -->
-<div class="row p-4" id="faq">
-  <div class="col-12 bd-content">
-    <h2 class="text-center">Accepted Papers</h2>
-  </div>
-</div>
-    <div class="speakers">
-        <section>
-            <h3>Long Papers</h3>
-            <div>
-                <span class="lead">Evaluating Referring Form Selection \Models in Partially-Known Environments</span><br/>
-                <i>Zhao Han, Polina Rygina, Thomas Williams</i>
-            </div>
-            <br>
 
-            <div>
-                <span class="lead">Template-based Approach to Zero-shot Intent Recognition</span><br>
-                <i>Dmitry Lamanov, Pavel Burnyshev, Katya Artemova, Valentin Malykh, Andrey Bout, Irina Piontkovskaya</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">"Slow Service" $$\cancel{$\rightarrow$}$$ "Great Food": Enhancing Content Preservation in Unsupervised Text Style Transfer</span><br>
-                <i>Wanzheng Zhu, Suma Bhat</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Arabic Image Captioning using Pre-training of Deep Bidirectional Transformers</span><br>
-                <i>Jonathan Emami, Pierre Nugues, Ashraf Elnagar, Imad Afyouni</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Plot Writing From Pre-Trained Language Models</span><br>
-                <i>Yiping Jin, Vishakha Kadam, Dittaya Wanvarie</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Evaluating Legal Accuracy of Neural Generators on the Generation of Criminal Court Dockets Description</span><br>
-                <i>Nicolas Garneau, Eve Gaumond, Luc Lamontagne, Pierre-Luc Déziel</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Automatic Generation of Factual News Headlines in Finnish</span><br>
-                <i>Maximilain Koppatz, Khalid Alnajjar, Mika Hämäläinen, Thierry Poibeau</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Generating Coherent and Informative Descriptions for Groups of Visual Objects and Categories: A Simple Decoding Approach</span><br>
-                <i>Nazia Attari, David Schlangen, Martin Heckmann, Heiko Wersing, Sina Zarrieß</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Dealing with hallucination and omission in neural Natural Language Generation: A use case on meteorology.</span><br>
-                <i>Javier González Corbelle, Alberto Bugarín-Diz, Jose Maria Alonso-Moral, Juan Taboada</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Amortized Noisy Channel Neural Machine Translation</span><br>
-                <i>Richard Yuanzhe Pang, He He, Kyunghyun Cho</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Math Word Problem Generation with Multilingual Language Models</span><br>
-                <i>Kashyapa Niyarepola, Dineth Athapaththu, Savindu Kalsara Ekanayake, Surangika Ranathunga</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Comparing informativeness of an NLG chatbot vs graphical app in diet-information domain</span><br>
-                <i>Simone Balloccu, Ehud Reiter</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Generation of Student Questions for Inquiry-based Learning</span><br>
-                <i>Kevin Ros, Maxwell Jong, Chak Ho Chan, ChengXiang Zhai</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Zero-shot Cross-Linguistic Learning of Event Semantics</span><br>
-                <i>Malihe Alikhani, Thomas H Kober, Bashar Alhafni, Mert Inan, Shahab Raji, Yue Chen, Elizabeth Kaye Nielsen, Mark Steedman, Matthew Stone</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Nominal Metaphor Generation with Multitask Learning</span><br>
-                <i>YUCHENG LI, Chenghua Lin, Frank Guerin</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Strategies for framing argumentative conclusion generation </span><br>
-                <i>Philipp Heinisch, Anette Frank, Juri Opitz, Philipp Cimiano</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Quantum Natural Language Generation on Near-Term Devices</span><br>
-                <i>Amin Karamlou, James R Wootton, Marcel Pfaffhauser</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT</span><br>
-                <i>Bhavya Bhavya, Jinjun Xiong, ChengXiang Zhai</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Towards Evaluation of Multi-party Dialogue Systems</span><br>
-                <i>Khyati Mahajan, Sashank Santhanam, Samira Shaikh</i>
-            </div>
-        </section>
-        <br>
-        <section>
-            <h3>Short Papers</h3>
-            <div>
-                <span class="lead">Paraphrasing via Ranking Many Candidates</span><br>
-                <i>Joosung Lee</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Improving Controllability of Educational Question Generation by Keyword Provision </span><br>
-                <i>Ying-Hong Chan, Ho-Lam Chung, Yao-Chung Fan</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Generating Landmark-based Manipulation Instructions from Image Pairs</span><br>
-                <i>Sina Zarrieß, Henrik Voigt, David Schlangen, Philipp Sadler</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Look and Answer the Question: On the Role of Vision in Embodied Questi\on Answering</span><br/>
-                <i>Nikolai Ilinykh, Yasmeen Emampoor, Simon Dobnik</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Cross-lingual Transfer for Text Generation by Language-Agnostic Finetuning</span><br>
-                <i>Xianze Wu, Zaixiang Zheng, Hao Zhou, Yong Yu</i>
-            </div>
-            <br>
-
-            <div>
-                <span class="lead">Are Current Decoding Strategies Capable of Facing the Challenges of Visual Dialogue?</span><br>
-                <i>Amit Kumar Chaudhary, Alex J. Lucassen, Ioanna Tsani, Alberto Testoni</i>
-            </div>
-        </section>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm border">
+      <h1>Accepted Papers</h1>
+<h3>Long Papers</h3>
+<p>Guided Beam Search to Improve Generalization in Low-Resource Data-to-Text Generation.  <br />
+<em>Nicolas Garneau and Luc Lamontagne</em>  </p>
+<p>XF2T: Cross-lingual Fact-to-Text Generation for Low-Resource Languages.  <br />
+<em>Shivprasad Sagare, Tushar Abhishek, Bhavyajeet Singh, Anubhav Sharma, Manish Gupta and Vasudeva Varma</em>  </p>
+<p>Preventing Generation of Verbatim Memorization in Language Models Gives a False Sense of Privacy.<br />
+<em>Daphne Ippolito, Florian Tramer, Milad Nasr, Chiyuan Zhang, Matthew Jagielski, Katherine Lee, Christopher Choquette Choo and Nicholas Carlini</em>  </p>
+<p>Fine-Tuning GPT-3 for Synthetic Danish News Generation.<br />
+<em>Mina Almasi and Anton Schiønning</em>  </p>
+<p>GAN-LM: Generative Adversarial Network using Language Models for Downstream Applications.<br />
+<em>Dae Yon Hwang, Yaroslav Nechaev, Cyprien de Lichy and Renxian Zhang</em>  </p>
+<p>Summaries as Captions: Generating Figure Captions for Scientific Documents with Automated Text Summarization.<br />
+<em>Chieh-Yang Huang, Ting-Yao Hsu, Ryan Rossi, Ani Nenkova, Sungchul Kim, Gromit Yeuk-Yin Chan, Eunyee Koh, C Lee Giles and Ting-Hao Huang</em>  </p>
+<p>Models of reference production: How do they withstand the test of time?<br />
+<em>Fahime Same, Guanyi Chen and Kees van Deemter</em>  </p>
+<p>Generating Faithful Text From a Knowledge Graph with Noisy Reference Text.<br />
+<em>Tahsina Hashem, Weiqing Wang, Derry Tanti Wijaya, Mohammed Eunus Ali and Yuan-Fang Li</em>  </p>
+<p>Entropy-based Sampling for Abstractive Multi-document Summarization in Low-resource Settings.<br />
+<em>Laura Mascarell, Ribin Chalumattu and Julien Heitmann</em>  </p>
+<p>Claim Optimization in Computational Argumentation.<br />
+<em>Gabriella Skitalinskaya, Maximilian Spliethöver and Henning Wachsmuth</em>  </p>
+<p>ChatGPT's Information Seeking Strategy: Insights from the 20-Question Game.<br />
+<em>Leonardo Bertolazzi, Davide Mazzaccara, Filippo Merlo and Raffaella Bernardi</em>  </p>
+<p>This is not correct! Negation-aware Evaluation of Language Generation Systems.<br />
+<em>Miriam Anschütz, Diego Miguel Lozano and Georg Groh</em>  </p>
+<p>Guidance in Radiology Report Summarization: An Empirical Evaluation and Error Analysis.<br />
+<em>Jan Trienes, Paul Youssef, Jörg Schlötterer and Christin Seifert</em>  </p>
+<p>A Zero-Shot Approach for Multi-User Task-Oriented Dialog Generation.<br />
+<em>Shiv Surya, Yohan Jo, Arijit Biswas and Alexandros Potamianos</em>  </p>
+<p>Beyond the Bias: Unveiling the Quality of Implicit Causality Prompt Continuations in Language Models.<br />
+<em>Judith Sieker, Oliver Bott, Torgrim Solstad and Sina Zarrieß</em>  </p>
+<p>Enhancing factualness and controllability of Data-to-Text Generation via data Views and constraints.<br />
+<em>Craig Thomson, Clement Rebuffel, Ehud Reiter, Laure Soulier, Somayajulu Sripada and patrick Gallinari</em>  </p>
+<p>Memories for Virtual AI Characters.<br />
+<em>Fabian Landwehr, Erika Varis Doggett and Romann M. Weber</em>  </p>
+<p>Optimizing Example Selection for In-context Learning: A Case Study in Text Simplification.<br />
+<em>Subhadra Vadlamannati and Gözde Şahin</em>  </p>
+<p>Exploring the Naturalness of Cognitive Status-Informed Referring Form Selection Models.<br />
+<em>Gabriel Del Castillo, Grace Clark, Zhao Han and Tom Williams</em>  </p>
+<p>System-Initiated Transitions from Chit-Chat to Task-Oriented Dialogues with Transition Info Extractor and Transition Sentence Generator.<br />
+<em>Ye Liu, Stefan Ultes, Wolfgang Minker and Wolfgang Maier</em>  </p>
+<p>HL Dataset: Visually-grounded Description of Scenes, Actions and Rationales.<br />
+<em>Michele Cafagna, Kees van Deemter and Albert Gatt</em>  </p>
+<p>Validating Predictive Models Of Evaluative Language For Controllable Data2Text Generation.<br />
+<em>Maurice Langner and Ralf Klabunde</em>  </p>
+<p>Can LLMs Learn better Storytelling With A Few Examples?<br />
+<em>Zhuohan Xie, Trevor Cohn and Jey Han Lau</em>  </p>
+<p>Trustworthiness of Children Stories Generated by Large Language Models.<br />
+<em>Prabin Bhandari and Hannah Brennan</em>  </p>
+<p>On Text Style Transfer via Style Masked Language Models.<br />
+<em>Sharan Narasimhan, Pooja H, Suvodip Dey and Maunendra Sankar Desarkar</em>  </p>
+<p>Affective Natural Language Generation of Event Descriptions through Fine-grained Appraisal Conditions.<br />
+<em>Yarik Menchaca Resendiz and Roman Klinger</em>  </p>
+<h3>Short Papers</h3>
+<p>Leveraging Low-resource Parallel Data for Text Style Transfer.<br />
+<em>Sourabrata Mukherjee and Ondrej Dusek</em>  </p>
+<p>Reverse-Engineering Language Model Decoding Strategies Given Blackbox Access to a Generation System.<br />
+<em>Daphne Ippolito, Nicholas Carlini, Katherine Lee, Milad Nasr and Yun William Yu</em>  </p>
+<p>Controlling keywords and their positions in text generation.<br />
+<em>Yuichi Sasazawa, Terufumi Morishita, Hiroaki Ozaki, Osamu Imaichi and Yasuhiro Sogawa</em>  </p>
+<p>Tackling Hallucinations in Neural Chart Summarization.<br />
+<em>Saad Obaid ul Islam, Iza Škrjanec, Ondrej Dusek and Vera Demberg</em>  </p>
+<p>Learning Disentangled Meaning and Style Representations for Positive Text Reframing.<br />
+<em>Xu Sheng, Fumiyo Fukumoto, Jiyi Li, Go Kentaro and Yoshimi Suzuki</em>  </p>
+<p>Generating clickbait spoilers with an ensemble of large language models.<br />
+<em>Mateusz Woźny and Mateusz Lango</em>  </p>
+<p>Reducing named entity hallucination risk to ensure faithful summary generation.<br />
+<em>Eunice Akani, Benoit Favre, Frederic Bechet and Romain GEMIGNANI</em>  </p>
+<p>Building a dual dataset of text- and image-grounded conversations and summarisation in Gàidhlig (Scottish Gaelic).<br />
+<em>David M. Howcroft, William Lamb, Anna Groundwater and Dimitra Gkatzia</em>  </p>
+<p>Generating Multiple Questions from Presentation Transcripts: A Pilot Study on Earnings Conference Calls.<br />
+<em>Yining Juan, Chung-Chi Chen, Hen-Hsen Huang and Hsin-Hsi Chen</em>  </p>
+<p>Mod-D2T: A Multi-layer Dataset for Modular Data-to-Text Generation.<br />
+<em>Simon Mille, Francois Lareau, Anya Belz and Stamatia Dasiopoulou</em>  </p>
+<h3>Demo Papers</h3>
+<p>MiReportor: Medical Imaging Report Generator for Understanding and Interpreting Multimodal Medical Images.<br />
+<em>Xuwen Wang, Hetong Ma, Zhen Guo, Lin Yang and Jiao Li</em>  </p>
+<p>enlg: a Python library for reproducible neural data-to-text experimentation.<br />
+<em>David M. Howcroft and Dimitra Gkatzia</em>  </p>
+<p>VisuaLLM: Easy Web-based Visualization for Neural Language Generation.<br />
+<em>František Trebuňa and Ondrej Dusek</em>  </p>
+<p>Audio Commentary System for Real-Time Racing Game Play.<br />
+<em>Tatsuya Ishigaki, Goran Topić, Yumi Hamazono, Ichiro Kobayashi, Yusuke Miyao and Hiroya Takamura</em></p>
     </div>
+<!--    <div class="col col-lg-2">-->
+<!--      <a class="twitter-timeline" data-height="500" href="https://twitter.com/inlgmeeting?ref_src=twsrc%5Etfw">Tweets by inlgmeeting</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+<!--    </div>-->
   </div>
 </div>
+
+    
+    <script>
+      const updateUI = async () => {
+        const auth0_domain = "dev-ma80app1.us.auth0.com";
+        const auth0_client_id = "ptF3gg7K6X0VN0FxOeCAVbKURrAis82d";
+        const auth0 = await createAuth0Client({
+          domain: auth0_domain,
+          client_id: auth0_client_id,
+          cacheLocation: "localstorage",
+        });
+        const is_auth = await auth0.isAuthenticated();
+        console.log(is_auth, "--- is_auth");
+        if (is_auth) {
+          document.body.style.display = null;
+
+          // unused atm, hook up later; this won't get executed since we change location above
+          const user = await auth0.getUser();
+          $(".loginBtn").hide();
+          $(".logoutBtn").show();
+          $(".secret").show();
+          $(".user_name").text(user.name);
+          $(".login-message").text("You are logged in as");
+        } else {
+          $(".loginBtn").show();
+          $(".logoutBtn").hide();
+          $(".secret").hide();
+          $(".user_name").text("");
+          $(".login-message").text("You are currently not authenticated.");
+        }
+
+        $(".loginBtn").click(async function () {
+          window.location.href = `redirect.html?return=index.html`;
+        });
+        $(".logoutBtn").click(async function () {
+          await auth0.logout({
+            returnTo: window.location.href,
+          });
+        });
+      };
+      updateUI();
+    </script>
+    
+
 
     </div>
 </div>
@@ -358,7 +377,7 @@
 <footer class="footer bg-light p-4">
     <div class="container">
         <p class="float-right"><a href="#">Back to Top</a></p>
-        <p class="text-center">© 2020 INLG 2022 Organizers</p>
+        <p class="text-center">© 2020 INLG 2023 Organizers</p>
     </div>
 </footer>
 

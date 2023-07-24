@@ -160,10 +160,9 @@ def accepted_papers():
 
 @app.route("/local.html")
 def local():
-    return redirect("https://sigdialinlg2023.github.io/", code=302)
-#   data = _data()
-#   data["local"] = open("sitedata/local.md").read()
-#   return render_template("local.html", **data)
+    data = _data()
+    data["local"] = open("sitedata/local.md").read()
+    return render_template("local.html", **data)
 
 # @app.route("/papers.html")
 # def papers():
