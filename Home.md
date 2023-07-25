@@ -4,6 +4,8 @@ The 16th International Natural Language Generation Conference
 will be held jointly with the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDial 2023).
 The events will take place in Prague on September 11-15, 2023.
 
+[Workshops](workshops.html) take place on September 11-12, INLG main conference on September 13-15.
+
 ### News
 
 Jul 24: [The Program/Local website for SIGDIAL&INLG](https://sigdialinlg2023.github.io/) is online, with [Registration](https://sigdialinlg2023.github.io/registration.html) and basic [Venue information](https://sigdialinlg2023.github.io/venue.html) (more to come). Early registration and special rates at the venue hotel are available until August 10.
