@@ -114,6 +114,14 @@ def organizers():
     data["committee"] = site_data["committee"]["committee"]
     return render_template("organizers.html", **data)
 
+@app.route("/awards.html")
+def awards():
+    data = _data()
+    data["awards"] = open("sitedata/awards.md").read()
+    return render_template("awards.html", **data)
+
+
+
 @app.route("/speakers.html")
 def speakers():
     data = _data()
