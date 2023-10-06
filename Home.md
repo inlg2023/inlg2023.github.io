@@ -7,6 +7,8 @@ The events will take place in Prague on September 11-15, 2023.
 [Workshops](workshops.html) take place on September 11-12, INLG main conference on September 13-15 (in parallel with SIGDIAL).
 
 ### News
+Oct 5: The INLG 2023 proceedings are now available in the [ACL Anthology](https://aclanthology.org/venues/inlg/).
+
 Oct 3: The list of [best paper awards and nominations](awards.html) is online.
 
 Aug 30: The [Program](https://sigdialinlg2023.github.io/calendar.html) is available on [the Program/Local website for SIGDIAL&INLG](https://sigdialinlg2023.github.io/).
